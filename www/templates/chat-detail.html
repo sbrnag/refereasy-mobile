@@ -1,0 +1,93 @@
+<!--
+  This template loads for the 'tab.friend-detail' state (app.js)
+  'friend' is a $scope variable created in the FriendsCtrl controller (controllers.js)
+  The FriendsCtrl pulls data from the Friends service (service.js)
+  The Friends service returns an array of friend data
+-->
+
+<!-- <ion-view view-title="{{chat.name}}">
+  <ion-nav-title>
+    <img style="width: 30px; height: 30px; border-radius: 50%;" src="{{chat.gravatar}}">
+  </ion-nav-title>
+   <ion-content> -->
+    <!-- <ion-list> -->
+    <!-- Job card --> 
+    <!-- <div class="list card">
+      <div class="item item-avatar">
+        <img ng-src="{{chat.jobGravatar}}">
+        <h2>{{chat.jobPoster}}</h2>
+        <p><span am-time-ago="chat.jobPostedOn"></span></p>
+        <p>{{chat.jobSkills}}</p>
+      </div>
+    </div>
+
+    <ion-item class="item-remove-animate item-avatar item-icon-right" type="item-text-wrap">
+        <img ng-src="{{chat.gravatar}}">
+          <p>{{chat.name}}</p>
+          <p>{{chat.initialText}}</p>
+    </ion-item> 
+
+    <div class="item-icon-right" ng-repeat="msg in messages | orderBy: 'datetime': reverse" type="item-text-wrap" ng-show="msg.name != null"> -->
+        <!-- <img ng-src="{{msg.gravatar}}"> -->
+          <!-- <h3>{{msg.name}}</h3> -->
+          <!-- <p>{{msg.text}}</p>
+    </div> 
+ -->
+
+
+
+   <!--  </ion-list> -->
+  <!-- </ion-content>
+  <ion-footer-bar keyboard-attach class="bar-stable item-input-inset">
+      <label class="item-input-wrapper">
+        <input type="text" placeholder="Type your message" on-return="sendMessage(); closeKeyboard()" ng-model="text" on-focus="inputUp()" on-blur="inputDown()" />
+      </label>
+      <button class="button button-clear" ng-click="sendMessage()">
+        Send
+      </button>
+  </ion-footer-bar>
+</ion-view> -->
+
+
+
+<ion-view title="{{chat.name}}">
+  <ion-nav-title>
+    {{chat.name}}
+  </ion-nav-title>
+  <ion-nav-buttons side="left">
+    <button class="button button-clear"><img class="header-picture" ng-src="{{chat.gravatar}}"></button>
+  </ion-nav-buttons>
+  <ion-content class="chat" delegate-handle="userMessageScroll">
+    <div class="message-list">
+
+      <!--To display the intial message-->
+      <div class="message-wrapper message" ng-class="currentUser.uid != chat.jobUid ? 'message-mine' : 'message-other'">
+          <div class="text">{{chat.initialText}}</div>
+          <span class="message-timestamp">{{chat.datetime | calendar}}</span>
+      </div>
+
+      <div ng-repeat="msg in messages| orderBy: 'datetime': reverse" class="message-wrapper" ng-show="msg.uid != null">
+        <div class="message" ng-class="currentUser.uid == msg.uid ? 'message-mine' : 'message-other'">
+          <div class="text">{{msg.text}}</div>
+          <span class="message-timestamp">{{msg.datetime | calendar}}</span>
+        </div>
+      </div>
+    </div>
+  </ion-content>
+  <ion-footer-bar keyboard-attach class="bar-stable footer-chat item-input-inset">
+    <label class="item-input-wrapper">
+      <input
+            ng-model="text"
+            dir="auto"
+            type="text"
+            on-return="sendMessage(); closeKeyboard();"
+            ng-focus="inputUp();"
+            ng-blur="inputDown();"/>
+    </label>
+
+    <span ng-if="text.length > 0">
+      <button ng-click="sendMessage()" class="button button-clear button-positive">Send</button>
+    </span>
+    
+  </ion-footer-bar>
+</ion-view>

@@ -1,0 +1,21 @@
+<ion-view view-title="ReferEasy">
+  <ion-content class="padding">
+    <div>
+      <h1 class="">The Fastest way to refer / get reffered.</h1>
+      <h2>Let all your friends know about the referral jobs in your company in one shot or ask you friends to refer you when you want to move.</h2>
+    </div>
+
+    <div ng-hide="authData" class="card" ng-click="login()">
+      <button class="item">
+      Log In with Facebook
+      </button>
+    </div>
+
+    <div class="card" ng-show="authData">
+      <div class="item item-text-wrap">
+        Hello {{authData.facebook.displayName}}!
+      </div>
+    </div>
+
+  </ion-content>
+</ion-view>

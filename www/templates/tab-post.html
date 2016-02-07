@@ -1,0 +1,35 @@
+<ion-view view-title="Post Job">
+<ion-content class="padding">
+  <form ng-submit="postJob()">
+      <div class="list">
+        <label class="item item-input item-stacked-label">
+          <span class="input-label">Skills</span>
+          <input type="text" placeholder="java j2ee spring hibernate" ng-model="job.skills" required>
+        </label>
+        <label class="item item-input item-stacked-label">
+          <span class="input-label">Min Experience</span>
+          <input type="number" placeholder="2" ng-model="job.min_exp" required>
+        </label>
+        <label class="item item-input item-stacked-label">
+          <span class="input-label">Max Experience</span>
+          <input type="number" placeholder="5" ng-model="job.max_exp" required>
+        </label>
+         <label class="item item-input item-stacked-label">
+          <span class="input-label">Company</span>
+          <input type="text" placeholder="Refereasy pvt ltd" ng-model="job.company" required>
+        </label>
+        <label class="item item-input item-stacked-label">
+          <span class="input-label">Location</span>
+          <input type="text" placeholder="Bangalore" ng-model="job.location" required>
+        </label>
+        <label class="item item-input item-stacked-label">
+          <span class="input-label">Should Join In (days)</span>
+          <input type="number" placeholder="60" ng-model="job.shouldjoinin" required>
+        </label>
+      </div>
+      <div class="padding">
+        <button type="submit" class="button button-block button-positive">Post Job</button>
+      </div>
+    </form> 
+</ion-content>
+</ion-view>

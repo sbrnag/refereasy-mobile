@@ -1,0 +1,157 @@
+/*
+To customize the look and feel of Ionic, you can override the variables
+in ionic's _variables.scss file.
+
+For example, you might change some of the default colors:
+
+$light:                           #fff !default;
+$stable:                          #f8f8f8 !default;
+$positive:                        #387ef5 !default;
+$calm:                            #11c1f3 !default;
+$balanced:                        #33cd5f !default;
+$energized:                       #ffc900 !default;
+$assertive:                       #ef473a !default;
+$royal:                           #886aea !default;
+$dark:                            #444 !default;
+*/
+
+// The path for our ionicons font files, relative to the built CSS in www/css
+$ionicons-font-path: "../lib/ionic/fonts" !default;
+
+// Include all of Ionic
+@import "www/lib/ionic/scss/ionic";
+
+.job-posted-timestamp {
+    position: absolute;
+    top: 16px;
+    right: 38px;
+    font-size: 14px;
+    color: #9A9898;
+}
+
+.item-chat {
+  .last-message-timestamp {
+    position: absolute;
+    top: 16px;
+    right: 38px;
+    font-size: 14px;
+    color: #9A9898;
+  }
+}
+
+.header-picture {
+  max-width: 33px;
+  max-height: 33px;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+}
+
+.chat {
+  background-image: url(/img/chat-background.jpg);
+  background-color: #E0DAD6;
+  background-repeat: no-repeat;
+  background-size: 100%;
+}
+
+.message-list {
+  margin-top: 12px;
+  padding: 0 5%;
+}
+
+.message-wrapper {
+  margin-bottom: 20px;
+
+  &::after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+}
+
+.message {
+  display: inline-block;
+  position: relative;
+  max-width: 236px;
+  border-radius: 7px;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, .15);
+
+  &.message-mine {
+    float: right;
+    background-color: #DCF8C6;
+  }
+
+  &.message-other {
+    float: left;
+    background-color: #FFF;
+  }
+
+  &.message-other::before, &.message-mine::before, {
+    content: "";
+    position: absolute;
+    bottom: 3px;
+    width: 12px;
+    height: 19px;
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
+    background-size: contain;
+  }
+
+  &.message-other::before {
+    left: -11px;
+    background-image: url(/img/message-other.png)
+  }
+
+  &.message-mine::before {
+    right: -11px;
+    background-image: url(/img/message-mine.png)
+  }
+
+  .text {
+    padding: 5px 7px;
+    word-wrap: break-word;
+
+    &::after {
+      content: " \00a0\00a0\00a0\00a0\00a0\00a0\00a0\00a0\00a0\00a0\00a0\00a0\00a0\00a0\00a0\00a0\00a0\00a0\00a0";
+      display: inline;
+    }
+  }
+
+  .picture {
+    padding: 4px 4px 0;
+
+    img {
+      width: 220px;
+      height: 130px;
+      border-radius: 6px;
+    }
+  }
+
+  .message-timestamp {
+    position: absolute;
+    bottom: 2px;
+    right: 7px;
+    color: gray;
+    font-size: 12px;
+  }
+}
+
+.footer-chat {
+  .item-input-wrapper {
+    background-color: #FFF;
+  }
+
+  .button.button-icon {
+    margin: 0 10px;
+  }
+
+  .buttons-seperator {
+    color: gray;
+    font-size: 18px;
+    line-height: 32px;
+  }
+}
+
+
+
+

@@ -1,0 +1,40 @@
+<ion-view view-title="{{job.poster}}">
+  <ion-nav-title>
+    {{job.poster}}
+  </ion-nav-title>
+  <ion-content class="padding">
+	<div class="list card">
+		<div class="item item-avatar">
+			<img ng-src="{{job.gravatar}}">
+			<h2>{{job.poster}}</h2>
+			<p><span am-time-ago="job.datetime"></span></p>
+		</div>
+
+		<div class="item item-body">
+			<h3>{{job.skills}}</h3>
+			<h3>{{job.min_exp}} - {{job.max_exp}} Years. {{job.company}}</h3>
+			<h3>{{job.location}}.</h3>
+			<p>
+		      <a href="#" class="subdued">1 Like</a>
+		    </p>
+		</div>
+
+		<div class="item tabs tabs-secondary tabs-icon-left">
+			<a ng-show="currentUser.uid === job.uid" class="tab-item" href="#">
+			  <i class="icon ion-edit"></i>
+			  Edit
+			</a>
+			<a ng-show="currentUser.uid === job.uid" class="tab-item" href="#">
+			  <i class="icon ion-android-delete"></i>
+			  Delete
+			</a>
+			<a class="tab-item" href="#">
+			  <i class="icon ion-share"></i>
+			  Share
+			</a>
+		</div>
+	</div>
+
+	<button ng-show="currentUser.uid != job.uid"class="button button-small button-positive" ng-click="askReference()"> Start Chat </button>
+</ion-content>
+</ion-view>

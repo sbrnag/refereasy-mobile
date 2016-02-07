@@ -1,0 +1,15 @@
+<ion-view view-title="Browse Jobs">
+  <ion-content>
+    <ion-list>
+      <ion-item class="item-remove-animate item-avatar item-icon-right" ng-repeat="job in jobs | orderBy: 'datetime':true" type="item-text-wrap" href="#/tab/jobs/{{job.$id}}">
+        <img ng-src="{{job.gravatar}}">
+        <h3>{{job.poster}}</h3>
+        <h3><i class="ion-settings"></i> {{job.skills}}</h3>
+        <h3><i class="ion-briefcase"></i> {{job.min_exp}} - {{job.max_exp}} years. <i class="ion-ios-location"></i> {{job.location}}</h3>
+        <h3>{{job.company}}.</h3> 
+        <span class="job-posted-timestamp" am-time-ago="job.datetime"></span>
+        <i class="icon ion-chevron-right icon-accessory"></i>
+      </ion-item>
+    </ion-list>
+  </ion-content>
+</ion-view>

@@ -47,25 +47,20 @@
       </button>
   </ion-footer-bar>
 </ion-view> -->
-
-
-
 <ion-view title="{{chat.name}}">
+  
   <ion-nav-title>
     {{chat.name}}
   </ion-nav-title>
+  
+
   <ion-nav-buttons side="left">
-    <button class="button button-clear"><img class="header-picture" ng-src="{{chat.gravatar}}"></button>
+    <button class="button button-clear">
+    <img class="header-picture" ng-src="{{chat.gravatar}}"></button>
   </ion-nav-buttons>
+
   <ion-content class="chat" delegate-handle="userMessageScroll">
     <div class="message-list">
-
-      <!--To display the intial message-->
-      <div class="message-wrapper message" ng-class="currentUser.uid != chat.jobUid ? 'message-mine' : 'message-other'">
-          <div class="text">{{chat.initialText}}</div>
-          <span class="message-timestamp">{{chat.datetime | calendar}}</span>
-      </div>
-
       <div ng-repeat="msg in messages| orderBy: 'datetime': reverse" class="message-wrapper" ng-show="msg.uid != null">
         <div class="message" ng-class="currentUser.uid == msg.uid ? 'message-mine' : 'message-other'">
           <div class="text">{{msg.text}}</div>
@@ -74,6 +69,7 @@
       </div>
     </div>
   </ion-content>
+
   <ion-footer-bar keyboard-attach class="bar-stable footer-chat item-input-inset">
     <label class="item-input-wrapper">
       <input

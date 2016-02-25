@@ -1,4 +1,10 @@
 <ion-view view-title="Account">
+
+  <ion-nav-buttons side="right">
+    <button class="button button-clear">
+    <img class="header-picture" ng-src="{{currentUser.facebook.profileImageURL}}"></button>
+  </ion-nav-buttons>
+  
   <ion-content>
     
     <h3>Hi {{currentUser.facebook.displayName}}</h3>

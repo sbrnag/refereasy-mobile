@@ -1,9 +1,17 @@
 <ion-view view-title="Chats">
+  
+  <ion-nav-buttons side="right">
+    <button class="button button-clear">
+    <img class="header-picture" ng-src="{{currentUser.facebook.profileImageURL}}"></button>
+  </ion-nav-buttons>
+  
   <ion-content>
     <ion-list>
-      <ion-item class="item-chat item-remove-animate item-avatar item-icon-right" ng-repeat="chat in chats | orderBy: 'datetime' " ng-show="chat.userUid === currentUser.uid || chat.jobUid === currentUser.uid" type="item-text-wrap" href="#/tab/chats/{{chat.$id}}">
+      <ion-item class="item-chat item-remove-animate item-avatar item-icon-right" ng-repeat="chat in chats | orderBy: 'datetime':true" ng-show="chat.userUid === currentUser.uid || chat.jobUid === currentUser.uid" type="item-text-wrap" href="#/tab/chats/{{chat.$id}}">
         <img ng-src="{{chat.gravatar}}">
         <h3>{{chat.name}}</h3>
+        <span class="badge badge-balanced" style="top: 34px;" ng-show="chat.userUid === currentUser.uid  && chat.seekerUnread > 0">{{chat.seekerUnread}}</span>
+        <span class="badge badge-balanced" style="top: 34px;" ng-show="chat.jobUid === currentUser.uid   && chat.posterUnread > 0">{{chat.posterUnread}}</span>
         <p>{{chat.lastText}}</p>
         <span class="last-message-timestamp">{{chat.datetime | calendar}}</span>
         <i class="icon ion-chevron-right icon-accessory"></i>

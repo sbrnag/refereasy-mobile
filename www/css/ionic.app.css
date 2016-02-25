@@ -9730,17 +9730,17 @@ a.button {
 
 .job-posted-timestamp {
   position: absolute;
-  top: 16px;
+  top: 7px;
   right: 38px;
-  font-size: 14px;
-  color: #9A9898; }
+  font-size: 12px;
+  color: #2196F3; }
 
 .item-chat .last-message-timestamp {
   position: absolute;
-  top: 16px;
+  top: 12px;
   right: 38px;
-  font-size: 14px;
-  color: #9A9898; }
+  font-size: 12px;
+  color: #2196F3; }
 
 .header-picture {
   max-width: 33px;
@@ -9750,7 +9750,7 @@ a.button {
   border-radius: 50%; }
 
 .chat {
-  background-image: url(/img/chat-background.jpg);
+  background-image: url(../img/chat-background.jpg);
   background-color: #E0DAD6;
   background-repeat: no-repeat;
   background-size: 100%; }
@@ -9789,10 +9789,10 @@ a.button {
     background-size: contain; }
   .message.message-other::before {
     left: -11px;
-    background-image: url(/img/message-other.png); }
+    background-image: url(../img/message-other.png); }
   .message.message-mine::before {
     right: -11px;
-    background-image: url(/img/message-mine.png); }
+    background-image: url(../img/message-mine.png); }
   .message .text {
     padding: 5px 7px;
     word-wrap: break-word; }

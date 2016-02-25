@@ -35,6 +35,6 @@
 		</div>
 	</div>
 
-	<button ng-show="currentUser.uid != job.uid"class="button button-small button-positive" ng-click="askReference()"> Start Chat </button>
+	<button ng-show="currentUser.uid != job.uid"class="button button-small button-positive" ng-click="askReference()" ng-hide="job.references[currentUser.uid]"> Start Chat </button>
 </ion-content>
 </ion-view>

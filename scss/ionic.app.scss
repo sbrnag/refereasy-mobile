@@ -23,19 +23,19 @@ $ionicons-font-path: "../lib/ionic/fonts" !default;
 
 .job-posted-timestamp {
     position: absolute;
-    top: 16px;
+    top: 7px;
     right: 38px;
-    font-size: 14px;
-    color: #9A9898;
+    font-size: 12px;
+    color: #2196F3;
 }
 
 .item-chat {
   .last-message-timestamp {
     position: absolute;
-    top: 16px;
+    top: 12px;
     right: 38px;
-    font-size: 14px;
-    color: #9A9898;
+    font-size: 12px;
+    color: #2196F3;
   }
 }
 
@@ -48,7 +48,7 @@ $ionicons-font-path: "../lib/ionic/fonts" !default;
 }
 
 .chat {
-  background-image: url(/img/chat-background.jpg);
+  background-image: url(../img/chat-background.jpg);
   background-color: #E0DAD6;
   background-repeat: no-repeat;
   background-size: 100%;
@@ -99,12 +99,12 @@ $ionicons-font-path: "../lib/ionic/fonts" !default;
 
   &.message-other::before {
     left: -11px;
-    background-image: url(/img/message-other.png)
+    background-image: url(../img/message-other.png)
   }
 
   &.message-mine::before {
     right: -11px;
-    background-image: url(/img/message-mine.png)
+    background-image: url(../img/message-mine.png)
   }
 
   .text {

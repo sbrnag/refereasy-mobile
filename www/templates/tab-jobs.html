@@ -1,12 +1,16 @@
 <ion-view view-title="Browse Jobs">
+  <ion-nav-buttons side="right">
+    <button class="button button-clear">
+    <img class="header-picture" ng-src="{{currentUser.facebook.profileImageURL}}"></button>
+  </ion-nav-buttons>
   <ion-content>
     <ion-list>
-      <ion-item class="item-remove-animate item-avatar item-icon-right" ng-repeat="job in jobs | orderBy: 'datetime':true" type="item-text-wrap" href="#/tab/jobs/{{job.$id}}">
+      <ion-item class="item item-thumbnail-left item-remove-animate item-avatar item-icon-right" ng-repeat="job in jobs | orderBy: 'datetime':true" type="item-text-wrap" href="#/tab/jobs/{{job.$id}}">
         <img ng-src="{{job.gravatar}}">
         <h3>{{job.poster}}</h3>
         <h3><i class="ion-settings"></i> {{job.skills}}</h3>
-        <h3><i class="ion-briefcase"></i> {{job.min_exp}} - {{job.max_exp}} years. <i class="ion-ios-location"></i> {{job.location}}</h3>
-        <h3>{{job.company}}.</h3> 
+        <h3><i class="ion-briefcase"></i> {{job.min_exp}} - {{job.max_exp}} years. {{job.company}}</h3>
+        <h3><i class="ion-ios-location"></i> {{job.location}}.</h3> 
         <span class="job-posted-timestamp" am-time-ago="job.datetime"></span>
         <i class="icon ion-chevron-right icon-accessory"></i>
       </ion-item>

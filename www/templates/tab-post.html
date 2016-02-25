@@ -1,30 +1,34 @@
 <ion-view view-title="Post Job">
+  <ion-nav-buttons side="right">
+    <button class="button button-clear">
+    <img class="header-picture" ng-src="{{currentUser.facebook.profileImageURL}}"></button>
+  </ion-nav-buttons>
 <ion-content class="padding">
   <form ng-submit="postJob()">
       <div class="list">
-        <label class="item item-input item-stacked-label">
+        <label class="item item-input item-floating-label">
           <span class="input-label">Skills</span>
-          <input type="text" placeholder="java j2ee spring hibernate" ng-model="job.skills" required>
+          <input type="text" placeholder="Skills" ng-model="job.skills" required>
         </label>
-        <label class="item item-input item-stacked-label">
+        <label class="item item-input item-floating-label">
           <span class="input-label">Min Experience</span>
-          <input type="number" placeholder="2" ng-model="job.min_exp" required>
+          <input type="number" placeholder="Min Experience" ng-model="job.min_exp" required>
         </label>
-        <label class="item item-input item-stacked-label">
+        <label class="item item-input item-floating-label">
           <span class="input-label">Max Experience</span>
-          <input type="number" placeholder="5" ng-model="job.max_exp" required>
+          <input type="number" placeholder="Max Experience" ng-model="job.max_exp" required>
         </label>
-         <label class="item item-input item-stacked-label">
+         <label class="item item-input item-floating-label">
           <span class="input-label">Company</span>
-          <input type="text" placeholder="Refereasy pvt ltd" ng-model="job.company" required>
+          <input type="text" placeholder="Company" ng-model="job.company" required>
         </label>
-        <label class="item item-input item-stacked-label">
+        <label class="item item-input item-floating-label">
           <span class="input-label">Location</span>
-          <input type="text" placeholder="Bangalore" ng-model="job.location" required>
+          <input type="text" placeholder="Location" ng-model="job.location" required>
         </label>
-        <label class="item item-input item-stacked-label">
+        <label class="item item-input item-floating-label">
           <span class="input-label">Should Join In (days)</span>
-          <input type="number" placeholder="60" ng-model="job.shouldjoinin" required>
+          <input type="number" placeholder="Should Join In (days" ng-model="job.shouldjoinin" required>
         </label>
       </div>
       <div class="padding">

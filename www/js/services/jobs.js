@@ -28,6 +28,12 @@ app.factory("Jobs", function(FURL, $firebaseArray, $firebaseObject, Auth) {
 
     deleteJob: function(jobId) {
       //delete job
+    },
+
+    addUser: function(jobId, uId) {
+      //to get the info of users who asked reference from jobs
+      var jobReferences =  ref.child("/jobs/" + jobId + "/references/" + uId);
+      jobReferences.set(true);
     }
 
   };

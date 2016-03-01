@@ -12,9 +12,9 @@ app.controller('ChatDetailCtrl', function($scope, $stateParams, Chats, Auth, $ti
   
   
 
-  $scope.messages.$loaded(function() {
+  /*$scope.messages.$loaded(function() {
     $ionicScrollDelegate.scrollBottom();
-  });
+  });*/
 
   $scope.messages.$watch(function() { 
     $timeout(function() {
